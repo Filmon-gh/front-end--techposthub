@@ -1,0 +1,31 @@
+/* Modified CSS for App */
+.AppContainer {
+    font-family: "Poppins", sans-serif;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+}
+
+/* Common styles for links */
+a {
+    color: #666666;
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2142b2;
+}
+
+/* Common styles for icons */
+.icon {
+    color: #999999;
+    font-size: 1.5rem;
+    padding: 8px;
+    vertical-align: middle;
+}
+
+.icon:hover {
+    cursor: pointer;
+    color: #2142b2;
+    transition: color 0.3s ease-in-out;
+}
