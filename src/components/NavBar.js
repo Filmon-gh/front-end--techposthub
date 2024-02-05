@@ -1,25 +1,31 @@
-import React from "react";
-import { Navbar, Container, Nav } from "react-bootstrap";
-import styles from "../styles/NavBar.module.css";
+// Navbar.js
 
-const NavBar = () => {
+import React from 'react';
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
+const Navigation = () => {
   return (
-    <Navbar className={styles.NavBar} expand="md" fixed="top">
+    <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand>TechHubPost
+        <Navbar.Brand as={Link} to="/">
+          TechHabPost
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto text-left">
-            <Nav.Link>
-            🏠 Home
+          <Nav className="me-auto">
+            <Nav.Link as={Link} to="/">
+              Home
             </Nav.Link>
-            <Nav.Link>
-            🔑 Log in
-            </Nav.Link>
-            <Nav.Link>
-            ✏️ Sign up
-            </Nav.Link>
+            <NavDropdown title="Account" id="basic-nav-dropdown">
+              <NavDropdown.Item as={Link} to="/login">
+                Login
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/signup">
+                Sign Up
+              </NavDropdown.Item>
+            </NavDropdown>
+            {/* Add other navigation links as needed */}
           </Nav>
         </Navbar.Collapse>
       </Container>
@@ -27,4 +33,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navigation;

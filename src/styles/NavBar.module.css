@@ -1,4 +1,37 @@
-.NavBar {
-  background-color: #FFFFFF;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* App.css */
+
+/* Custom styles for the navigation */
+.navbar {
+  margin-bottom: 20px;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.nav-link {
+  margin-right: 10px;
+}
+
+/* Optional: Customize the navigation color scheme */
+.navbar-light .navbar-nav .nav-link {
+  color: #641515; /* Change the color as needed */
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-color: #000; /* Change the color as needed */
+}
+
+/* Optional: Add hover effect */
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #007bff; /* Change the color as needed */
+}
+
+/* Optional: Add active link styling */
+.navbar-light .navbar-nav .nav-item.active .nav-link {
+  color: #007bff; /* Change the color as needed */
 }
