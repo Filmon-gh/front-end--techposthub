@@ -1,28 +1,22 @@
+
 .NavBar {
-  background-color: #ffffff;
+  background-color: #c8d6e4;
+  position: relative;
   padding: 15px 0;
   border-bottom: 1px solid #e5e5e5;
-  transition: background-color 0.3s ease;
+  box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.7), /* White drop */
+ 
 }
 
-.NavBar:hover {
-  background-color: #c3cdd6;
-}
-
-.NavBar .navbar-brand {
-  color: #164fb8;
+.brand {
+  color: #aab9cf;
   font-weight: bold;
-  font-size: 24px;
-  transition: color 0.3s ease;
+  font-size: 26px;
 }
 
-.NavBar .nav-link {
-  color: #000000;
+.navLinks {
+  color: #aab9cf;
   font-weight: bold;
-  transition: color 0.3s ease;
-}
+  font-size: 20px;
 
-.NavBar .nav-link:hover,
-.NavBar .navbar-brand:hover {
-  color: #007bff;
 }
