@@ -9,6 +9,13 @@ function SignUpForm() {
     confirmPassword: '',
   });
 
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
   return (
     <div>
       <h2>Sign Up</h2>
@@ -20,6 +27,7 @@ function SignUpForm() {
             id="username"
             name="username"
             value={formData.username}
+            onChange={handleChange}
           />
         </div>
         <div>
@@ -29,6 +37,7 @@ function SignUpForm() {
             id="email"
             name="email"
             value={formData.email}
+            onChange={handleChange}
           />
         </div>
         <div>
@@ -38,6 +47,7 @@ function SignUpForm() {
             id="password"
             name="password"
             value={formData.password}
+            onChange={handleChange}
           />
         </div>
         <div>
@@ -47,6 +57,7 @@ function SignUpForm() {
             id="confirmPassword"
             name="confirmPassword"
             value={formData.confirmPassword}
+            onChange={handleChange}
           />
         </div>
         <button type="submit">Sign Up</button>
