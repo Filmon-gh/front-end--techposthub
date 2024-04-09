@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 function SignUpForm() {
   
@@ -8,6 +10,9 @@ function SignUpForm() {
     password: '',
     confirmPassword: '',
   });
+  
+  const [errors, setErrors] = useState({});
+  const history = useHistory();
 
   const handleChange = (e) => {
     setFormData({
@@ -16,10 +21,21 @@ function SignUpForm() {
     });
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post("/dj-rest-auth/registration/", formData);
+      history.push("/signin");
+    } catch (err) {
+      setErrors(err.response?.data);
+
+    }
+  };
+
   return (
     <div>
       <h2>Sign Up</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="username">Username:</label>
           <input
@@ -62,8 +78,18 @@ function SignUpForm() {
         </div>
         <button type="submit">Sign Up</button>
       </form>
-    </div>
-    
+      {errors &&
+        <div className="error-message">
+          {typeof errors === 'string' ? <p>{errors}</p> : (
+            <ul>
+              {Object.values(errors).map((error, index) => (
+                <li key={index}>{error}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      }    
+    </div>  
   );
 }
 
