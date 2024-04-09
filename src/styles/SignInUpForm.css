@@ -1,0 +1,62 @@
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .signup-form {
+    width: 300px; 
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+  }
+  
+.signup-form h2,
+.signup-form label {
+  color: rgb(97, 97, 175); 
+  font-weight: bold; 
+}
+
+/* Style for input fields */
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Style for the "Sign Up" button */
+.signup-form button[type="submit"] {
+  background-color: blue; 
+  color: white; 
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s; 
+}
+
+/* Hover effect for the "Sign Up" button */
+.signup-form button[type="submit"]:hover {
+  background-color: darkblue; 
+}
+
+/* Style for specific input fields */
+.signup-form #email,
+.signup-form #confirmPassword {
+  color: rgb(121, 121, 196); 
+  font-weight: bold; 
+
+  }
+
+/* Style for error messages */
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }

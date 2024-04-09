@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
+import  "../../styles/SignInUpForm.css";
 
 function SignUpForm() {
   
@@ -33,7 +34,8 @@ function SignUpForm() {
   };
 
   return (
-    <div>
+    <div className="signup-container">
+    <div className="signup-form">
       <h2>Sign Up</h2>
       <form onSubmit={handleSubmit}>
         <div>
@@ -89,6 +91,7 @@ function SignUpForm() {
           )}
         </div>
       }    
+    </div>
     </div>  
   );
 }
